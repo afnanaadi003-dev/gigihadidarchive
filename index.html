@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gigi Hadid Archive: Life, Vision & Legacy</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Playfair Display for editorial headers & Inter for sleek body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: {
+                            50: '#FAF8F5',
+                            100: '#F5F1EA',
+                            200: '#E8E1D5',
+                            300: '#D9CDBA',
+                            800: '#4A443A',
+                            900: '#2C2722',
+                        },
+                        gold: {
+                            400: '#D4AF37',
+                            500: '#C5A028',
+                            600: '#A38118',
+                        },
+                        sage: {
+                            100: '#E8EFE9',
+                            500: '#7F9A86',
+                            700: '#4A6251',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Inter"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Smooth scrolling */
+        html { scroll-behavior: smooth; }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #F5F1EA; }
+        ::-webkit-scrollbar-thumb { background: #D9CDBA; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #C5A028; }
+
+        /* Glassmorphic elements */
+        .glass-nav {
+            background: rgba(250, 248, 245, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .editorial-card {
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .editorial-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 30px -10px rgba(44, 39, 34, 0.08);
+        }
+
+        /* Subtle gold shine effect */
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #2C2722 0%, #A38118 50%, #2C2722 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .sage-badge {
+            background: rgba(127, 154, 134, 0.15);
+            color: #4A6251;
+        }
+    </style>
+</head>
+<body class="bg-cream-50 text-cream-900 font-sans antialiased selection:bg-gold-400 selection:text-white">
+
+    <!-- Header Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-cream-200/60 transition-all duration-300">
+        <div class="max-w-7xl mx-mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Title -->
+                <a href="#hero" class="flex flex-col">
+                    <span class="font-serif text-2xl font-bold tracking-wider text-cream-900 uppercase">Gigi Hadid</span>
+                    <span class="text-[10px] tracking-[0.25em] text-gold-600 uppercase font-semibold">Digital Archive</span>
+                </a>
+
+                <!-- Desktop Nav Links -->
+                <nav class="hidden md:flex space-x-8 text-xs uppercase tracking-widest font-semibold text-cream-800">
+                    <a href="#filmic" class="hover:text-gold-600 transition-colors">Filmic Gigi</a>
+                    <a href="#family" class="hover:text-gold-600 transition-colors">Lineage</a>
+                    <a href="#business" class="hover:text-gold-600 transition-colors">Enterprise</a>
+                    <a href="#philosophy" class="hover:text-gold-600 transition-colors">Philosophy</a>
+                    <a href="#fashion" class="hover:text-gold-600 transition-colors">Glamour & Green</a>
+                    <a href="#awards" class="hover:text-gold-600 transition-colors">Accolades</a>
+                </nav>
+
+                <!-- Action Button -->
+                <div class="hidden sm:flex items-center space-x-4">
+                    <button onclick="openModal('manifesto-modal')" class="px-5 py-2.5 rounded-full border border-cream-900 text-xs uppercase tracking-widest font-semibold hover:bg-cream-900 hover:text-cream-50 transition-all duration-300">
+                        Archive Manifesto
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-cream-900 focus:outline-none p-2">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden bg-cream-50 border-b border-cream-200 px-6 py-6 space-y-4">
+            <a href="#filmic" class="mobile-nav-link block text-sm uppercase tracking-widest font-medium py-1">Filmic Gigi</a>
+            <a href="#family" class="mobile-nav-link block text-sm uppercase tracking-widest font-medium py-1">Lineage & Heritage</a>
+            <a href="#business" class="mobile-nav-link block text-sm uppercase tracking-widest font-medium py-1">Business Mogul</a>
+            <a href="#philosophy" class="mobile-nav-link block text-sm uppercase tracking-widest font-medium py-1">Philosophy & Re-Feminism</a>
+            <a href="#fashion" class="mobile-nav-link block text-sm uppercase tracking-widest font-medium py-1">Glamour & Green Future</a>
+            <a href="#awards" class="mobile-nav-link block text-sm uppercase tracking-widest font-medium py-1">Awards & Critic Recognition</a>
+            <button onclick="openModal('manifesto-modal')" class="w-full mt-4 px-5 py-3 rounded-full bg-cream-900 text-cream-50 text-xs uppercase tracking-widest font-semibold">
+                Read Manifesto
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content Wrapper -->
+    <main class="pt-20">
+
+        <!-- HERO SECTION -->
+        <section id="hero" class="relative min-h-[90vh] flex items-center justify-center bg-cream-100 overflow-hidden border-b border-cream-200">
+            <!-- Decorative Subtle Background Pattern -->
+            <div class="absolute inset-0 opacity-5 pointer-events-none bg-[radial-gradient(#2C2722_1px,transparent_1px)] [background-size:24px_24px]"></div>
+            
+            <div class="max-w-5xl mx-auto px-6 py-24 text-center relative z-10">
+                <span class="inline-block mb-4 px-4 py-1.5 rounded-full sage-badge text-xs uppercase tracking-[0.2em] font-semibold">
+                    Living Cultural Archive
+                </span>
+                <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-normal tracking-tight mb-8 leading-[1.08] gold-gradient-text">
+                    Gigi Hadid
+                </h1>
+                <p class="font-serif italic text-lg sm:text-2xl text-cream-800 max-w-3xl mx-auto mb-10 font-light leading-relaxed">
+                    “Icon of modern fashion, founder, maternal philosopher, filmic presence, and advocate for an empathetic, sustainable world.”
+                </p>
+
+                <!-- Quick Stats Grid -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mt-12 text-left">
+                    <div class="p-5 rounded-2xl bg-cream-50/80 border border-cream-200/80 shadow-sm">
+                        <span class="block font-serif text-3xl font-bold text-gold-600 mb-1">35+</span>
+                        <span class="text-xs uppercase tracking-wider text-cream-800 font-medium">Vogue Covers Worldwide</span>
+                    </div>
+                    <div class="p-5 rounded-2xl bg-cream-50/80 border border-cream-200/80 shadow-sm">
+                        <span class="block font-serif text-3xl font-bold text-gold-600 mb-1">2022</span>
+                        <span class="text-xs uppercase tracking-wider text-cream-800 font-medium">Guest in Residence Founded</span>
+                    </div>
+                    <div class="p-5 rounded-2xl bg-cream-50/80 border border-cream-200/80 shadow-sm">
+                        <span class="block font-serif text-3xl font-bold text-sage-700 mb-1">100%</span>
+                        <span class="text-xs uppercase tracking-wider text-cream-800 font-medium">Cashmere Heirloom Philosophy</span>
+                    </div>
+                    <div class="p-5 rounded-2xl bg-cream-50/80 border border-cream-200/80 shadow-sm">
+                        <span class="block font-serif text-3xl font-bold text-gold-600 mb-1">2016</span>
+                        <span class="text-xs uppercase tracking-wider text-cream-800 font-medium">BFA Model of the Year</span>
+                    </div>
+                </div>
+
+                <div class="mt-12 flex flex-wrap justify-center gap-4">
+                    <a href="#filmic" class="px-8 py-4 rounded-full bg-cream-900 text-cream-50 text-xs uppercase tracking-widest font-semibold hover:bg-gold-600 transition-all shadow-md">
+                        Explore Works
+                    </a>
+                    <a href="#philosophy" class="px-8 py-4 rounded-full border border-cream-900 text-cream-900 text-xs uppercase tracking-widest font-semibold hover:bg-cream-200 transition-all">
+                        The Philosophy
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 1: FILMIC GIGI (FILM, TV & VISUAL MEDIA) -->
+        <section id="filmic" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-cream-200">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <span class="text-xs uppercase tracking-[0.25em] text-gold-600 font-bold block mb-2">Section 01</span>
+                    <h2 class="font-serif text-3xl sm:text-5xl font-bold text-cream-900">Filmic Gigi</h2>
+                </div>
+                <p class="text-sm text-cream-800 max-w-md mt-4 md:mt-0 font-light leading-relaxed">
+                    From feature film cameos and voiceover narration to directing music videos and co-hosting major competitive design shows.
+                </p>
+            </div>
+
+            <!-- Media Category Filter -->
+            <div class="flex flex-wrap gap-2 mb-10 border-b border-cream-200 pb-4" id="filmic-filters">
+                <button data-filter="all" class="filmic-btn active px-4 py-2 rounded-full text-xs uppercase tracking-wider font-semibold bg-cream-900 text-cream-50 transition-all">All Works</button>
+                <button data-filter="film" class="filmic-btn px-4 py-2 rounded-full text-xs uppercase tracking-wider font-semibold bg-cream-100 text-cream-800 hover:bg-cream-200 transition-all">Feature & Shorts</button>
+                <button data-filter="tv" class="filmic-btn px-4 py-2 rounded-full text-xs uppercase tracking-wider font-semibold bg-cream-100 text-cream-800 hover:bg-cream-200 transition-all">Television & Hosting</button>
+                <button data-filter="music" class="filmic-btn px-4 py-2 rounded-full text-xs uppercase tracking-wider font-semibold bg-cream-100 text-cream-800 hover:bg-cream-200 transition-all">Music Videos & Direction</button>
+            </div>
+
+            <!-- Filmic Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="filmic-grid">
+                <!-- Item 1: Next In Fashion -->
+                <div class="filmic-card filmic-tv editorial-card bg-cream-100 rounded-2xl p-6 border border-cream-200 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-gold-400/20 text-gold-600">Netflix Series</span>
+                            <span class="text-xs font-semibold text-cream-800">2023</span>
+                        </div>
+                        <h3 class="font-serif text-2xl font-bold mb-2">Next in Fashion (Season 2)</h3>
+                        <p class="text-xs uppercase tracking-widest text-gold-600 font-semibold mb-4">Co-Host & Fashion Mentor</p>
+                        <p class="text-sm text-cream-800 leading-relaxed font-light">
+                            Co-hosted alongside Tan France, offering authentic industry wisdom, empathetic design critiques, and high-energy style inspiration for emerging designers worldwide.
+                        </p>
+                    </div>
+                    <button onclick="showMediaDetail('Next in Fashion', 'Co-hosted Season 2 alongside Tan France. Celebrated by critics for bringing warmth, high-fashion experience, and constructive critique to emerging international designers.', 'TV Hosting & Mentorship', '2023')" class="mt-6 inline-flex items-center text-xs font-semibold uppercase tracking-wider text-gold-600 hover:text-cream-900 transition-colors">
+                        Details <i class="fa-solid fa-arrow-right ml-2 text-[10px]"></i>
+                    </button>
+                </div>
+
+                <!-- Item 2: Ocean's 8 -->
+                <div class="filmic-card filmic-film editorial-card bg-cream-100 rounded-2xl p-6 border border-cream-200 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-cream-200 text-cream-900">Feature Film</span>
+                            <span class="text-xs font-semibold text-cream-800">2018</span>
+                        </div>
+                        <h3 class="font-serif text-2xl font-bold mb-2">Ocean’s 8</h3>
+                        <p class="text-xs uppercase tracking-widest text-gold-600 font-semibold mb-4">Cameo Appearance (Self)</p>
+                        <p class="text-sm text-cream-800 leading-relaxed font-light">
+                            Featured in the iconic Met Gala heist sequence, cementing her cultural status as a modern Met Gala fixture alongside Hollywood royalty.
+                        </p>
+                    </div>
+                    <button onclick="showMediaDetail('Ocean\'s 8', 'Appeared in the high-stakes Met Gala sequence alongside Sandra Bullock, Cate Blanchett, and Rihanna. The film highlighted her real-world role as a fashion authority.', 'Warner Bros. Feature Film', '2018')" class="mt-6 inline-flex items-center text-xs font-semibold uppercase tracking-wider text-gold-600 hover:text-cream-900 transition-colors">
+                        Details <i class="fa-solid fa-arrow-right ml-2 text-[10px]"></i>
+                    </button>
+                </div>
+
+                <!-- Item 3: Cake by the Ocean -->
+                <div class="filmic-card filmic-music editorial-card bg-cream-100 rounded-2xl p-6 border border-cream-200 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-sage-100 text-sage-700">Directorial Debut</span>
+                            <span class="text-xs font-semibold text-cream-800">2015</span>
+                        </div>
+                        <h3 class="font-serif text-2xl font-bold mb-2">Cake by the Ocean</h3>
+                        <p class="text-xs uppercase tracking-widest text-gold-600 font-semibold mb-4">Director (DNCE Video)</p>
+                        <p class="text-sm text-cream-800 leading-relaxed font-light">
+                            Demonstrated behind-the-camera creative vision by co-directing the viral beach-side music video for DNCE, featuring playful summer aesthetic framing.
+                        </p>
+                    </div>
+                    <button onclick="showMediaDetail('Cake by the Ocean - DNCE', 'Gigi took the helm as director for this music video on Huntington Beach, displaying early creative direction talent outside modeling.', 'Music Video Direction', '2015')" class="mt-6 inline-flex items-center text-xs font-semibold uppercase tracking-wider text-gold-600 hover:text-cream-900 transition-colors">
+                        Details <i class="fa-solid fa-arrow-right ml-2 text-[10px]"></i>
+                    </button>
+                </div>
+
+                <!-- Item 4: Virgin Eyes -->
+                <div class="filmic-card filmic-film editorial-card bg-cream-100 rounded-2xl p-6 border border-cream-200 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-cream-200 text-cream-900">Short Film</span>
+                            <span class="text-xs font-semibold text-cream-800">2012</span>
+                        </div>
+                        <h3 class="font-serif text-2xl font-bold mb-2">Virgin Eyes</h3>
+                        <p class="text-xs uppercase tracking-widest text-gold-600 font-semibold mb-4">Role: Andrea</p>
+                        <p class="text-sm text-cream-800 leading-relaxed font-light">
+                            An early dramatic short film directed by Jonah Tan, marking Gigi's initial exploration into scripted narrative cinema prior to global modeling stardom.
+                        </p>
+                    </div>
+                    <button onclick="showMediaDetail('Virgin Eyes', 'Directed by Jonah Tan. Gigi played the role of Andrea in this intimate dramatic short film.', 'Independent Short', '2012')" class="mt-6 inline-flex items-center text-xs font-semibold uppercase tracking-wider text-gold-600 hover:text-cream-900 transition-colors">
+                        Details <i class="fa-solid fa-arrow-right ml-2 text-[10px]"></i>
+                    </button>
+                </div>
+
+                <!-- Item 5: Never Have I Ever -->
+                <div class="filmic-card filmic-tv editorial-card bg-cream-100 rounded-2xl p-6 border border-cream-200 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-gold-400/20 text-gold-600">Voiceover Narration</span>
+                            <span class="text-xs font-semibold text-cream-800">2021 - 2023</span>
+                        </div>
+                        <h3 class="font-serif text-2xl font-bold mb-2">Never Have I Ever</h3>
+                        <p class="text-xs uppercase tracking-widest text-gold-600 font-semibold mb-4">Guest Voice Narrator</p>
+                        <p class="text-sm text-cream-800 leading-relaxed font-light">
+                            Provided witty, self-aware inner-monologue narration for high-school heartthrob Paxton Hall-Yoshida in Mindy Kaling's hit Netflix comedy.
+                        </p>
+                    </div>
+                    <button onclick="showMediaDetail('Never Have I Ever', 'Voiced the inner monologue of Paxton in Season 2 & 4 of Mindy Kaling\'s hit Netflix series to rave fan reviews.', 'Netflix Comedy Series', '2021-2023')" class="mt-6 inline-flex items-center text-xs font-semibold uppercase tracking-wider text-gold-600 hover:text-cream-900 transition-colors">
+                        Details <i class="fa-solid fa-arrow-right ml-2 text-[10px]"></i>
+                    </button>
+                </div>
+
+                <!-- Item 6: Music Video Iconography -->
+                <div class="filmic-card filmic-music editorial-card bg-cream-100 rounded-2xl p-6 border border-cream-200 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-sage-100 text-sage-700">Pop Culture Icons</span>
+                            <span class="text-xs font-semibold text-cream-800">2015 - 2020</span>
+                        </div>
+                        <h3 class="font-serif text-2xl font-bold mb-2">Bad Blood & Pillowtalk</h3>
+                        <p class="text-xs uppercase tracking-widest text-gold-600 font-semibold mb-4">Star Roles ("Slay-Z")</p>
+                        <p class="text-sm text-cream-800 leading-relaxed font-light">
+                            Starred in defining music videos of the 2010s including Taylor Swift’s "Bad Blood" (as Slay-Z) and Zayn Malik's surrealist "Pillowtalk".
+                        </p>
+                    </div>
+                    <button onclick="showMediaDetail('Pop Music Video Legacy', 'Featured in historic music videos: Taylor Swift (Bad Blood), Zayn (Pillowtalk), Calvin Harris (How Deep Is Your Love).', 'Music Videos', '2015-2020')" class="mt-6 inline-flex items-center text-xs font-semibold uppercase tracking-wider text-gold-600 hover:text-cream-900 transition-colors">
+                        Details <i class="fa-solid fa-arrow-right ml-2 text-[10px]"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: FAMILY TREE & LINEAGE -->
+        <section id="family" class="py-24 bg-cream-100/60 border-b border-cream-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-xs uppercase tracking-[0.25em] text-gold-600 font-bold block mb-2">Section 02</span>
+                    <h2 class="font-serif text-3xl sm:text-5xl font-bold text-cream-900 mb-4">Family Tree & Lineage</h2>
+                    <p class="text-sm text-cream-800 font-light leading-relaxed">
+                        A multicultural tapestry bridging Palestinian heritage and Dutch modeling legacy, framing a close-knit family dynamic.
+                    </p>
+                </div>
+
+                <!-- Interactive Family Nodes -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                    <!-- Mohamed Hadid -->
+                    <div class="bg-cream-50 rounded-2xl p-6 border border-cream-200 text-center editorial-card">
+                        <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-cream-200 flex items-center justify-center text-cream-900 text-2xl font-serif font-bold">
+                            MH
+                        </div>
+                        <h3 class="font-serif text-xl font-bold">Mohamed Hadid</h3>
+                        <p class="text-xs uppercase tracking-widest text-gold-600 font-semibold mb-3">Father • Real Estate Developer</p>
+                        <p class="text-xs text-cream-800 font-light leading-relaxed">
+                            Palestinian developer born in Nazareth. Imbued Gigi with deep pride in her Middle Eastern roots, heritage, and resilience.
+                        </p>
+                    </div>
+
+                    <!-- Yolanda Hadid -->
+                    <div class="bg-cream-50 rounded-2xl p-6 border border-cream-200 text-center editorial-card">
+                        <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-cream-200 flex items-center justify-center text-cream-900 text-2xl font-serif font-bold">
+                            YH
+                        </div>
+                        <h3 class="font-serif text-xl font-bold">Yolanda Hadid</h3>
+                        <p class="text-xs uppercase tracking-widest text-gold-600 font-semibold mb-3">Mother • Former Supermodel</p>
+                        <p class="text-xs text-cream-800 font-light leading-relaxed">
+                            Dutch-born high fashion model & TV personality. Taught Gigi the golden rule of modeling: “Be the hardest worker in the room.”
+                        </p>
+                    </div>
+
+                    <!-- Khai Malik -->
+                    <div class="bg-cream-50 rounded-2xl p-6 border border-cream-200 text-center editorial-card">
+                        <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-sage-100 flex items-center justify-center text-sage-700 text-2xl font-serif font-bold">
+                            KM
+                        </div>
+                        <h3 class="font-serif text-xl font-bold">Khai Malik</h3>
+                        <p class="text-xs uppercase tracking-widest text-sage-700 font-semibold mb-3">Daughter (Born 2020)</p>
+                        <p class="text-xs text-cream-800 font-light leading-relaxed">
+                            Gigi's daughter with Zayn Malik. The centerpiece of Gigi's universe and the primary catalyst for her focus on slow-fashion sustainability.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Siblings Connection Box -->
+                <div class="bg-cream-900 text-cream-50 rounded-3xl p-8 sm:p-12 border border-cream-800">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <span class="text-xs uppercase tracking-[0.2em] text-gold-400 font-bold block mb-2">The Hadid Sibling Legacy</span>
+                            <h3 class="font-serif text-3xl font-bold mb-4">Bella & Anwar Hadid</h3>
+                            <p class="text-sm text-cream-200 leading-relaxed font-light mb-6">
+                                Together with sister Bella Hadid and brother Anwar, the siblings created an unprecedented family footprint in 21st-century runway history—championing each other with fierce loyalty rather than competition.
+                            </p>
+                            <div class="flex space-x-4">
+                                <span class="px-4 py-2 rounded-full bg-cream-800 text-xs font-medium text-cream-100">Bella: Haute Couture Titan</span>
+                                <span class="px-4 py-2 rounded-full bg-cream-800 text-xs font-medium text-cream-100">Anwar: Music & Jewelry</span>
+                            </div>
+                        </div>
+                        <!-- Quote Box -->
+                        <div class="bg-cream-800/60 p-6 rounded-2xl border border-cream-700/60 italic font-serif text-cream-100">
+                            "My mom always told us: 'There will always be someone prettier, younger, or harder working than you. So just focus on being kind, polite, and memorable.'"
+                            <span class="block text-xs uppercase font-sans tracking-widest text-gold-400 font-semibold not-italic mt-4">— Gigi Hadid</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: BUSINESS & ENTREPRENEURSHIP -->
+        <section id="business" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-cream-200">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+                <div>
+                    <span class="text-xs uppercase tracking-[0.25em] text-gold-600 font-bold block mb-2">Section 03</span>
+                    <h2 class="font-serif text-3xl sm:text-5xl font-bold text-cream-900">Business & Enterprise</h2>
+                </div>
+                <p class="text-sm text-cream-800 max-w-md mt-4 md:mt-0 font-light leading-relaxed">
+                    Evolving from cover star to founder and creative director—building heirloom brands and multi-million dollar design capsules.
+                </p>
+            </div>
+
+            <!-- Main Feature: Guest in Residence -->
+            <div class="bg-gradient-to-br from-cream-100 to-cream-200/50 rounded-3xl p-8 sm:p-12 border border-cream-300 mb-12 relative overflow-hidden">
+                <div class="max-w-2xl">
+                    <span class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-gold-400/20 text-gold-600 inline-block mb-4">Flagship Brand</span>
+                    <h3 class="font-serif text-3xl sm:text-4xl font-bold text-cream-900 mb-4">Guest in Residence (GIR)</h3>
+                    <p class="text-xs uppercase tracking-widest text-gold-600 font-semibold mb-6">Founder & Creative Director • Launched 2022</p>
+                    <p class="text-sm text-cream-800 leading-relaxed font-light mb-6">
+                        Born from a desire to create durable, heirloom-quality 100% cashmere pieces designed to be passed down through generations. Gigi serves as active Founder and Creative Director, overseeing yarn sourcing, vibrant colorways, and gender-inclusive fits.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-8">
+                        <div class="bg-cream-50 p-4 rounded-xl border border-cream-200">
+                            <span class="block text-xs uppercase font-bold text-cream-900">100% Cashmere</span>
+                            <span class="text-[11px] text-cream-800">Sustainably sourced fibers</span>
+                        </div>
+                        <div class="bg-cream-50 p-4 rounded-xl border border-cream-200">
+                            <span class="block text-xs uppercase font-bold text-cream-900">Heirloom Quality</span>
+                            <span class="text-[11px] text-cream-800">Designed to last generations</span>
+                        </div>
+                        <div class="bg-cream-50 p-4 rounded-xl border border-cream-200">
+                            <span class="block text-xs uppercase font-bold text-cream-900">Core Collection</span>
+                            <span class="text-[11px] text-cream-800">Timeless foundational knits</span>
+                        </div>
+                    </div>
+
+                    <button onclick="openModal('gir-modal')" class="px-6 py-3 rounded-full bg-cream-900 text-cream-50 text-xs uppercase tracking-widest font-semibold hover:bg-gold-600 transition-all">
+                        Deep Dive: GIR Brand Philosophy
+                    </button>
+                </div>
+            </div>
+
+            <!-- Historical Capsules Grid -->
+            <h3 class="font-serif text-2xl font-bold mb-6 text-cream-900">Collaborative Design Portfolio</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Tommy x Gigi -->
+                <div class="p-6 rounded-2xl bg-cream-100 border border-cream-200 editorial-card">
+                    <span class="text-xs font-semibold text-gold-600 uppercase">4 Global Seasons</span>
+                    <h4 class="font-serif text-xl font-bold mt-1 mb-2">Tommy x Gigi</h4>
+                    <p class="text-xs text-cream-800 font-light leading-relaxed">
+                        Co-designed global collections with Tommy Hilfiger that revolutionized the "See Now, Buy Now" runway model across London, LA, and Milan.
+                    </p>
+                </div>
+
+                <!-- Reebok x Gigi -->
+                <div class="p-6 rounded-2xl bg-cream-100 border border-cream-200 editorial-card">
+                    <span class="text-xs font-semibold text-sage-700 uppercase">Athletic Innovation</span>
+                    <h4 class="font-serif text-xl font-bold mt-1 mb-2">Reebok x Gigi Hadid</h4>
+                    <p class="text-xs text-cream-800 font-light leading-relaxed">
+                        Inspired by her volleyball athlete roots, creating vintage-inspired performance outerwear and reimagined sneaker silhouettes.
+                    </p>
+                </div>
+
+                <!-- Maybelline & Messika -->
+                <div class="p-6 rounded-2xl bg-cream-100 border border-cream-200 editorial-card">
+                    <span class="text-xs font-semibold text-gold-600 uppercase">Beauty & High Fine Jewelry</span>
+                    <h4 class="font-serif text-xl font-bold mt-1 mb-2">Maybelline & Messika</h4>
+                    <p class="text-xs text-cream-800 font-light leading-relaxed">
+                        Designed custom beauty palettes sold out worldwide and high jewelry capsules with Parisian house Messika.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: PHILOSOPHY, NOBLE MIND & RE-FEMINISM -->
+        <section id="philosophy" class="py-24 bg-cream-100/50 border-b border-cream-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-3xl mb-16">
+                    <span class="text-xs uppercase tracking-[0.25em] text-gold-600 font-bold block mb-2">Section 04</span>
+                    <h2 class="font-serif text-3xl sm:text-5xl font-bold text-cream-900 mb-4">Philosophy & Re-Feminism</h2>
+                    <p class="text-sm text-cream-800 font-light leading-relaxed">
+                        Redefining female empowerment in fashion through kindness, global humanitarian work, and structural solidarity.
+                    </p>
+                </div>
+
+                <!-- Interactive Pillars -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                    <!-- Pillar 1 -->
+                    <div class="bg-cream-50 rounded-2xl p-8 border border-cream-200 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-full bg-gold-400/20 text-gold-600 flex items-center justify-center text-xl mb-6">
+                                <i class="fa-solid fa-hands-holding-heart"></i>
+                            </div>
+                            <h3 class="font-serif text-2xl font-bold mb-3">UNICEF & Humanitarian Work</h3>
+                            <p class="text-xs text-cream-800 leading-relaxed font-light mb-4">
+                                Traveled with UNICEF to Bangladesh, Senegal, and refugee centers worldwide to advocate for children's education, water access, and aid. Donated runway earnings to Ukrainian & Palestinian relief initiatives.
+                            </p>
+                        </div>
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-gold-600">Global Action</span>
+                    </div>
+
+                    <!-- Pillar 2 -->
+                    <div class="bg-cream-50 rounded-2xl p-8 border border-cream-200 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-full bg-sage-100 text-sage-700 flex items-center justify-center text-xl mb-6">
+                                <i class="fa-solid fa-venus"></i>
+                            </div>
+                            <h3 class="font-serif text-2xl font-bold mb-3">Re-Feminist Attitude</h3>
+                            <p class="text-xs text-cream-800 leading-relaxed font-light mb-4">
+                                Reinterprets feminism not as competition, but as active support ("Women Loving Attitude"). Advocates for fair pay, parental leave on set, and championing female-led creative teams.
+                            </p>
+                        </div>
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-sage-700">Empowerment</span>
+                    </div>
+
+                    <!-- Pillar 3 -->
+                    <div class="bg-cream-50 rounded-2xl p-8 border border-cream-200 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-full bg-cream-200 text-cream-900 flex items-center justify-center text-xl mb-6">
+                                <i class="fa-solid fa-seedling"></i>
+                            </div>
+                            <h3 class="font-serif text-2xl font-bold mb-3">Habits of Kindness</h3>
+                            <p class="text-xs text-cream-800 leading-relaxed font-light mb-4">
+                                Legendary for bringing treats to backstage crews, remembering names, and keeping a grounded farm lifestyle in Pennsylvania away from fashion week chaos.
+                            </p>
+                        </div>
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-cream-900">Noble Habits</span>
+                    </div>
+                </div>
+
+                <!-- Interactive Quote Carousel / Switcher -->
+                <div class="bg-cream-200/60 rounded-3xl p-8 sm:p-12 border border-cream-300 text-center relative">
+                    <i class="fa-solid fa-quote-left text-3xl text-gold-500 mb-4 block"></i>
+                    <p id="quote-text" class="font-serif italic text-xl sm:text-2xl text-cream-900 max-w-3xl mx-auto mb-6">
+                        "We get to live in a time where we can support each other, lift each other up, and speak out for what is right without asking for permission."
+                    </p>
+                    <span id="quote-author" class="text-xs uppercase font-sans tracking-widest text-gold-600 font-bold block mb-6">— Gigi Hadid on Sisterhood & Voice</span>
+                    
+                    <div class="flex justify-center space-x-3">
+                        <button onclick="setQuote(0)" class="w-3 h-3 rounded-full bg-gold-600 transition-all quote-dot"></button>
+                        <button onclick="setQuote(1)" class="w-3 h-3 rounded-full bg-cream-300 transition-all quote-dot"></button>
+                        <button onclick="setQuote(2)" class="w-3 h-3 rounded-full bg-cream-300 transition-all quote-dot"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: FASHION SENSE, GLAMOUR & GREEN FUTURE -->
+        <section id="fashion" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-cream-200">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="text-xs uppercase tracking-[0.25em] text-sage-700 font-bold block mb-2">Section 05</span>
+                    <h2 class="font-serif text-3xl sm:text-5xl font-bold text-cream-900 mb-6">Glamour & The Green Future</h2>
+                    <p class="text-sm text-cream-800 font-light leading-relaxed mb-6">
+                        Gigi’s aesthetic marries high-octane 90s supermodel glamour with relaxed California cool—now evolving into a powerful push for ecological responsibility across fashion.
+                    </p>
+
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 rounded-full bg-sage-100 text-sage-700 flex items-center justify-center shrink-0 mt-1 mr-4">
+                                <i class="fa-solid fa-leaf text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-serif font-bold text-cream-900 text-base">Creamy Soft Aesthetics</h4>
+                                <p class="text-xs text-cream-800 font-light">Neutral palettes, tactile textures, oversized tailoring, and effortless street style luxury.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 rounded-full bg-sage-100 text-sage-700 flex items-center justify-center shrink-0 mt-1 mr-4">
+                                <i class="fa-solid fa-recycle text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-serif font-bold text-cream-900 text-base">Slow Fashion Advocacy</h4>
+                                <p class="text-xs text-cream-800 font-light">Championing circular fashion, rewearing archive runway pieces, and investing in non-synthetic materials.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 rounded-full bg-sage-100 text-sage-700 flex items-center justify-center shrink-0 mt-1 mr-4">
+                                <i class="fa-solid fa-earth-americas text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-serif font-bold text-cream-900 text-base">Ecological Luxury</h4>
+                                <p class="text-xs text-cream-800 font-light">Utilizing sustainable production to leave a cleaner, greener earth for her daughter Khai and future generations.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Style Palette Visualizer -->
+                <div class="bg-cream-100 rounded-3xl p-8 border border-cream-200 shadow-sm">
+                    <h3 class="font-serif text-2xl font-bold mb-4 text-cream-900">Gigi's Signature Palette & Elements</h3>
+                    <p class="text-xs text-cream-800 font-light mb-6">Click color swatches to inspect design notes:</p>
+                    
+                    <div class="grid grid-cols-4 gap-3 mb-6" id="palette-swatches">
+                        <button onclick="inspectSwatch('Cashmere Cream', '#FAF8F5', 'Comfort, warmth, and foundational luxury.')" class="h-16 rounded-xl border border-cream-300 bg-[#FAF8F5] shadow-sm hover:scale-105 transition-transform"></button>
+                        <button onclick="inspectSwatch('Sage Botanical', '#7F9A86', 'Sustainability, nature connection, and growth.')" class="h-16 rounded-xl bg-[#7F9A86] shadow-sm hover:scale-105 transition-transform"></button>
+                        <button onclick="inspectSwatch('Honey Gold', '#C5A028', 'Old-Hollywood glamour and runway warmth.')" class="h-16 rounded-xl bg-[#C5A028] shadow-sm hover:scale-105 transition-transform"></button>
+                        <button onclick="inspectSwatch('Espresso Dark', '#2C2722', 'Grounded structure, timeless tailoring, and depth.')" class="h-16 rounded-xl bg-[#2C2722] shadow-sm hover:scale-105 transition-transform"></button>
+                    </div>
+
+                    <div id="swatch-detail" class="p-4 rounded-xl bg-cream-50 border border-cream-200">
+                        <span id="swatch-name" class="font-serif font-bold text-sm block text-cream-900">Cashmere Cream</span>
+                        <span id="swatch-desc" class="text-xs text-cream-800 font-light">Comfort, warmth, and foundational luxury.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: AWARDS & CRITICAL RECOGNITION -->
+        <section id="awards" class="py-24 bg-cream-100/60">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-xs uppercase tracking-[0.25em] text-gold-600 font-bold block mb-2">Section 06</span>
+                    <h2 class="font-serif text-3xl sm:text-5xl font-bold text-cream-900 mb-4">Accolades & Critic Recognition</h2>
+                    <p class="text-sm text-cream-800 font-light leading-relaxed">
+                        Industry honors acknowledging Gigi’s transformation from digital pioneer to global style authority.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Award 1 -->
+                    <div class="p-6 rounded-2xl bg-cream-50 border border-cream-200 text-center editorial-card">
+                        <i class="fa-solid fa-trophy text-3xl text-gold-500 mb-4"></i>
+                        <h4 class="font-serif text-lg font-bold">International Model of the Year</h4>
+                        <p class="text-xs uppercase font-semibold text-gold-600 my-1">British Fashion Awards</p>
+                        <p class="text-xs text-cream-800 font-light">2016 • Presented at Royal Albert Hall</p>
+                    </div>
+
+                    <!-- Award 2 -->
+                    <div class="p-6 rounded-2xl bg-cream-50 border border-cream-200 text-center editorial-card">
+                        <i class="fa-solid fa-award text-3xl text-gold-500 mb-4"></i>
+                        <h4 class="font-serif text-lg font-bold">Model of the Year</h4>
+                        <p class="text-xs uppercase font-semibold text-gold-600 my-1">Daily Front Row FLAA</p>
+                        <p class="text-xs text-cream-800 font-light">2015 • Fashion Los Angeles Awards</p>
+                    </div>
+
+                    <!-- Award 3 -->
+                    <div class="p-6 rounded-2xl bg-cream-50 border border-cream-200 text-center editorial-card">
+                        <i class="fa-solid fa-pen-nib text-3xl text-gold-500 mb-4"></i>
+                        <h4 class="font-serif text-lg font-bold">Best Design Debut</h4>
+                        <p class="text-xs uppercase font-semibold text-gold-600 my-1">Tommy x Gigi Launch</p>
+                        <p class="text-xs text-cream-800 font-light">2017 • Industry Innovation Award</p>
+                    </div>
+
+                    <!-- Award 4 -->
+                    <div class="p-6 rounded-2xl bg-cream-50 border border-cream-200 text-center editorial-card">
+                        <i class="fa-solid fa-star text-3xl text-gold-500 mb-4"></i>
+                        <h4 class="font-serif text-lg font-bold">Glamour Supernova</h4>
+                        <p class="text-xs uppercase font-semibold text-gold-600 my-1">Women of the Year</p>
+                        <p class="text-xs text-cream-800 font-light">Honoree for Global Influence</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-cream-900 text-cream-50 py-16 border-t border-cream-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between">
+            <div class="mb-6 md:mb-0 text-center md:text-left">
+                <span class="font-serif text-2xl font-bold tracking-wider uppercase block">Gigi Hadid Archive</span>
+                <span class="text-[10px] tracking-[0.25em] text-gold-400 uppercase font-semibold">Living Tribute & Cultural Index</span>
+            </div>
+
+            <p class="text-xs text-cream-300 font-light text-center md:text-right">
+                Curated Digital Archive • Designed for exploration of fashion, film, business & sustainability.
+            </p>
+        </div>
+    </footer>
+
+    <!-- MODAL 1: MEDIA DETAIL MODAL -->
+    <div id="media-modal" class="fixed inset-0 z-50 hidden bg-cream-900/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-cream-50 rounded-3xl max-w-lg w-full p-8 border border-cream-200 shadow-2xl relative animate-fadeIn">
+            <button onclick="closeModal('media-modal')" class="absolute top-6 right-6 text-cream-900 hover:text-gold-600">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+            <span id="modal-category" class="text-[10px] font-bold uppercase tracking-widest text-gold-600">Category</span>
+            <h3 id="modal-title" class="font-serif text-2xl font-bold text-cream-900 my-2">Work Title</h3>
+            <span id="modal-year" class="text-xs font-semibold text-cream-800 block mb-4">Year</span>
+            <p id="modal-desc" class="text-sm text-cream-800 font-light leading-relaxed mb-6">Detailed description goes here.</p>
+            <button onclick="closeModal('media-modal')" class="w-full py-3 rounded-full bg-cream-900 text-cream-50 text-xs uppercase tracking-widest font-semibold">Close Panel</button>
+        </div>
+    </div>
+
+    <!-- MODAL 2: GUEST IN RESIDENCE DEEP DIVE -->
+    <div id="gir-modal" class="fixed inset-0 z-50 hidden bg-cream-900/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-cream-50 rounded-3xl max-w-2xl w-full p-8 sm:p-10 border border-cream-200 shadow-2xl relative max-h-[90vh] overflow-y-auto">
+            <button onclick="closeModal('gir-modal')" class="absolute top-6 right-6 text-cream-900 hover:text-gold-600">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+            <span class="text-[10px] font-bold uppercase tracking-widest text-gold-600">Founder & Creative Director</span>
+            <h3 class="font-serif text-3xl font-bold text-cream-900 my-2">Guest in Residence</h3>
+            <p class="text-xs text-cream-800 font-light mb-6">Founded by Gigi Hadid in 2022</p>
+            
+            <div class="space-y-4 text-sm text-cream-800 font-light leading-relaxed mb-8">
+                <p>
+                    <strong>The Name Philosophy:</strong> "We are guests on this planet, and we are guests in our clothes," explains Gigi Hadid. The name reflects her belief that high-quality garments should be cherished during our lifetimes and passed down as heirlooms.
+                </p>
+                <p>
+                    <strong>Sourcing & Craft:</strong> GIR works directly with ethical cashmere suppliers, utilizing long-staple fibers that resist pilling and increase soft durability with age.
+                </p>
+                <p>
+                    <strong>Color Theory:</strong> Moving away from standard dull neutrals, Gigi infuses saturated yellows, rich greens, and soft pastel pinks alongside foundational cream basics.
+                </p>
+            </div>
+            
+            <button onclick="closeModal('gir-modal')" class="w-full py-3 rounded-full bg-cream-900 text-cream-50 text-xs uppercase tracking-widest font-semibold">Return to Archive</button>
+        </div>
+    </div>
+
+    <!-- MODAL 3: MANIFESTO MODAL -->
+    <div id="manifesto-modal" class="fixed inset-0 z-50 hidden bg-cream-900/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-cream-50 rounded-3xl max-w-xl w-full p-8 border border-cream-200 shadow-2xl relative text-center">
+            <button onclick="closeModal('manifesto-modal')" class="absolute top-6 right-6 text-cream-900 hover:text-gold-600">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+            <i class="fa-solid fa-feather text-3xl text-gold-600 mb-4 inline-block"></i>
+            <h3 class="font-serif text-2xl font-bold text-cream-900 mb-4">The Archive Manifesto</h3>
+            <p class="text-xs text-cream-800 font-light leading-relaxed mb-6 italic font-serif text-base">
+                "To create art, fashion, and cinema is not merely to capture beauty, but to build a kinder, softer, and more sustainable world for those who follow."
+            </p>
+            <p class="text-xs text-cream-800 font-light leading-relaxed mb-6">
+                This digital archive celebrates the multi-hyphenate journey of Gigi Hadid—honoring her work as an actor, TV host, mother, fashion executive, and advocate for female empowerment and planetary greening.
+            </p>
+            <button onclick="closeModal('manifesto-modal')" class="px-8 py-3 rounded-full bg-cream-900 text-cream-50 text-xs uppercase tracking-widest font-semibold">Understood</button>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT FOR INTERACTIVITY -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Filmic Category Filter
+        const filmicBtns = document.querySelectorAll('.filmic-btn');
+        const filmicCards = document.querySelectorAll('.filmic-card');
+
+        filmicBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update button active state
+                filmicBtns.forEach(b => {
+                    b.classList.remove('bg-cream-900', 'text-cream-50', 'active');
+                    b.classList.add('bg-cream-100', 'text-cream-800');
+                });
+                btn.classList.add('bg-cream-900', 'text-cream-50', 'active');
+
+                const filter = btn.getAttribute('data-filter');
+
+                filmicCards.forEach(card => {
+                    if (filter === 'all' || card.classList.contains(`filmic-${filter}`)) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Quote Carousel Data
+        const quotes = [
+            {
+                text: '"We get to live in a time where we can support each other, lift each other up, and speak out for what is right without asking for permission."',
+                author: '— Gigi Hadid on Sisterhood & Voice'
+            },
+            {
+                text: '"Kindness is the greatest luxury in any industry. If you work hard and treat people with true respect, everything else follows."',
+                author: '— Gigi Hadid on Work Ethic'
+            },
+            {
+                text: '"Becoming a mother made me look at the future through a greener lens. What we build today must protect tomorrow for our children."',
+                author: '— Gigi Hadid on Motherhood & Sustainability'
+            }
+        ];
+
+        let currentQuote = 0;
+        function setQuote(index) {
+            currentQuote = index;
+            document.getElementById('quote-text').innerText = quotes[index].text;
+            document.getElementById('quote-author').innerText = quotes[index].author;
+
+            const dots = document.querySelectorAll('.quote-dot');
+            dots.forEach((dot, i) => {
+                if (i === index) {
+                    dot.classList.remove('bg-cream-300');
+                    dot.classList.add('bg-gold-600');
+                } else {
+                    dot.classList.remove('bg-gold-600');
+                    dot.classList.add('bg-cream-300');
+                }
+            });
+        }
+
+        // Palette Swatch Inspector
+        function inspectSwatch(name, hex, desc) {
+            document.getElementById('swatch-name').innerText = name;
+            document.getElementById('swatch-desc').innerText = desc;
+        }
+
+        // Generic Modal Handler
+        function openModal(id) {
+            document.getElementById(id).classList.remove('hidden');
+        }
+
+        function closeModal(id) {
+            document.getElementById(id).classList.add('hidden');
+        }
+
+        // Detail Modal Populator
+        function showMediaDetail(title, desc, category, year) {
+            document.getElementById('modal-title').innerText = title;
+            document.getElementById('modal-desc').innerText = desc;
+            document.getElementById('modal-category').innerText = category;
+            document.getElementById('modal-year').innerText = year;
+            openModal('media-modal');
+        }
+    </script>
+</body>
+</html>
